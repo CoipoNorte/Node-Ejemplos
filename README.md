@@ -140,6 +140,22 @@ Para comprobar que el servidor funciona deberas correr el codigo utilizando el s
 ```
 
 De esta forma cada vez que realices cambios el servidor se recargara automaticamente.
+## API REST
+
+Los modulos requeridos y sugeridos para ejecutar este proyecto se listan a continuacion.
+
+#### Modulos requeridos
+
+```bash
+  npm install express express-myconnection mysql 
+```
+
+### Modulos de desarrollo
+
+```bash
+  npm i nodemon --save-dev
+    
+```
 ## Autor
 
 - [@CoipoNorte](https://www.github.com/coiponorte)
