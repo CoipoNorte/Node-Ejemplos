@@ -14,3 +14,10 @@ Los modulos requeridos y sugeridos para ejecutar este proyecto se listan a conti
   npm i nodemon --save-dev
     
 ```
+
+### Lanzar API
+
+```bash
+  npm start
+    
+```
