@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = ({brand}) => {
     return ( 
-        <nav className="navbar navbar-dark bg-dark" aria-label="First navbar example">
+        <nav className="navbar navbar-dark bg-primary" aria-label="First navbar example">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Pand-ai</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">

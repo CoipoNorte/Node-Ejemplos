@@ -47,9 +47,9 @@ const BookList = ({book, setBook, books, setListUpdated}) => {
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Edition</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Edicion</th>
                     <th></th>
                 </tr>
             </thead>
@@ -61,12 +61,15 @@ const BookList = ({book, setBook, books, setListUpdated}) => {
                         <td>{book.autor}</td>
                         <td>{book.edicion}</td>
                         <td>
-                                <div className="mb-3">
-                                    <button onClick={() => handleDelete(book.id)} className="btn btn-danger">Delete</button>
+                                
+                                <div className="mb-2">
+                                    <button onClick={() => handleUpdate(book.id)} className="btn btn-warning">Actualizar</button>
                                 </div>
-                                <div className="mb-3">
-                                    <button onClick={() => handleUpdate(book.id)} className="btn btn-warning">Update</button>
+
+                                <div>
+                                    <button onClick={() => handleDelete(book.id)} className="btn btn-danger">Eliminar</button>
                                 </div>
+                                
                         </td>
                     </tr>
                 ))}

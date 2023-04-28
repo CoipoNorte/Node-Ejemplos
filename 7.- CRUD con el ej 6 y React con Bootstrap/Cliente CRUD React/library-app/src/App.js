@@ -39,18 +39,17 @@ function App() {
                             <p className="lead">Esta paguina web fue diseñada para poder Agregar, Eliminar y Actualizar las preguntas del bot de WhatsApp Pand-ai el cual fue desarrollado por el grupo Panda Proyect que no tiene nada que ver con salvar ni preservar a los pandas del mundo.</p>
                         </div>
 
-                        <div className="col-md-7 col-lg-8">
-                            <h2 className="mb-3 text-center">Book List</h2>
-                            <BookList book={book} setBook={setBook} books={books} setListUpdated={setListUpdated}/> 
-                        </div>
-
                         <div class="col-md-5 col-lg-4 order-md-last">
                             <h2 className="d-flex justify-content-between align-items-center mb-3">
-                                <span className="text-primary">Book Form</span>
+                                <span className="text-primary">Formulario de Pregunta</span>
                             </h2>
                             <Form book={book} setBook={setBook}/>  
                         </div>
                         
+                        <div className="col-md-7 col-lg-8">
+                            <h2 className="mb-3 text-center">Lista de Preguntas</h2>
+                            <BookList book={book} setBook={setBook} books={books} setListUpdated={setListUpdated}/> 
+                        </div>
 
                     </div>
                 </div>
