@@ -50,6 +50,7 @@ const BookList = ({book, setBook, books, setListUpdated}) => {
                     <th>Title</th>
                     <th>Author</th>
                     <th>Edition</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -60,12 +61,12 @@ const BookList = ({book, setBook, books, setListUpdated}) => {
                         <td>{book.autor}</td>
                         <td>{book.edicion}</td>
                         <td>
-                            <div className="mb-3">
-                                <button onClick={() => handleDelete(book.id)} className="btn btn-danger">Delete</button>
-                            </div>
-                            <div className="mb-3">
-                                <button onClick={() => handleUpdate(book.id)} className="btn btn-dark">Update</button>
-                            </div>
+                                <div className="mb-3">
+                                    <button onClick={() => handleDelete(book.id)} className="btn btn-danger">Delete</button>
+                                </div>
+                                <div className="mb-3">
+                                    <button onClick={() => handleUpdate(book.id)} className="btn btn-warning">Update</button>
+                                </div>
                         </td>
                     </tr>
                 ))}
