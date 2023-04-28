@@ -500,6 +500,18 @@ Ya con eso lanzamos la API y Recargamos REEACT carado!
 
 ## Algo Mas?
 
+```Bash
+npm i -g npm-check-updates
+```
+
+```Bash
+ncu -u
+```
+
+```Bash
+npm audit fix --force
+```
+
 ## Autor
 
 - [@CoipoNorte](https://www.github.com/coiponorte)
