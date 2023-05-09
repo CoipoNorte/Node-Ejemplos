@@ -1,0 +1,98 @@
+<%- include("partials/_header") %>
+
+        <main>
+            <div class="row g-5">        
+
+                <div class="col-md-7 col-lg-8">
+                    <h2 class="mb-3 text-center">Lista</h2>
+                
+                    <table class="table table-dark table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td>n°</td>
+                                <td>Pregunta</td>
+                                <td>Clave</td>
+                                <td>Respuesta</td>
+                                <td>Tipo</td>
+                                <td>Acciones</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (customers) { %> <% for(var i = 0; i < customers.length; i++) {
+                            %>
+                            <tr>
+                                <td><%= (i + 1) %></td>
+                                <td><%= customers[i].pregunta %></td>
+                                <td><%= customers[i].clave %></td>
+                                <td><%= customers[i].respuesta %></td>
+                                <td><%= customers[i].tipo %></td>
+                                <td class="d-flex gap-2">
+                                    <a href="/update/<%= customers[i].id %>" class="btn btn-info">
+                                        Editar
+                                    </a>
+                                    <a href="/delete/<%= customers[i].id %>" class="btn btn-danger">
+                                        Eliminar
+                                    </a>
+                                </td>
+                            </tr>
+                            <% } %> <% } %>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h2 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Formulario</span>
+                    </h2>
+                
+                    <form action="/add" method="POST">
+                        
+                        <div class="mb-3">
+                            <label htmlFor="title" class="form-label">Pregunta</label>
+                            <input
+                                type="text"
+                                name="pregunta"
+                                placeholder="Pregunta"
+                                class="form-control mb-2"
+                                autofocus
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label htmlFor="title" class="form-label">Clave</label>
+                            <input
+                                type="text"
+                                name="clave"
+                                placeholder="Clave"
+                                class="form-control mb-2"
+                            />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label htmlFor="title" className="form-label">Respuesta</label>
+                            <input
+                                type="text"
+                                name="respuesta"
+                                placeholder="Respuesta"
+                                class="form-control mb-2"
+                            />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label htmlFor="title" className="form-label">Tipo</label>
+                            <input
+                                type="text"
+                                name="tipo"
+                                placeholder="Tipo"
+                                class="form-control mb-2"
+                            />
+                        </div>
+                      
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+
+<%- include("partials/_footer") %>
