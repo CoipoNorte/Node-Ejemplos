@@ -2,7 +2,7 @@ import { pool } from "../db.js";
 
 export const renderConsultas = async (req, res) => {
     const [rows] = await pool.query("SELECT * FROM consulta");
-    res.render("consultas", { customers: rows });
+    res.render("consultas", { consultas: rows });
 };
 
 export const createConsultas = async (req, res) => {
@@ -16,7 +16,7 @@ export const editConsulta = async (req, res) => {
     const [result] = await pool.query("SELECT * FROM consulta WHERE id = ?", [
         id,
     ]);
-    res.render("consulta_edit", { customer: result[0] });
+    res.render("consulta_edit", { consulta: result[0] });
 };
 
 export const updateConsulta = async (req, res) => {

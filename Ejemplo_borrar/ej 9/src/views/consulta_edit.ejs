@@ -12,14 +12,14 @@
                         <span class="text-primary">Editar</span>
                     </h2>
                 
-                    <form action="/update/<%= customer.id %>" method="POST">
+                    <form action="/update/<%= consulta.id %>" method="POST">
                         
                         <div class="mb-3">
                             <label htmlFor="title" class="form-label">Pregunta</label>
                             <input
                                 type="text"
                                 name="pregunta"
-                                value="<%= customer.pregunta %>"
+                                value="<%= consulta.pregunta %>"
                                 placeholder="Pregunta"
                                 class="form-control mb-3"
                                 autofocus
@@ -31,7 +31,7 @@
                             <input
                                 type="text"
                                 name="clave"
-                                value="<%= customer.clave %>"
+                                value="<%= consulta.clave %>"
                                 placeholder="Clave"
                                 class="form-control mb-3"
                             />
@@ -42,7 +42,7 @@
                             <input
                                 type="text"
                                 name="respuesta"
-                                value="<%= customer.respuesta %>"
+                                value="<%= consulta.respuesta %>"
                                 placeholder="Respuesta"
                                 class="form-control mb-3"
                             />
@@ -53,7 +53,7 @@
                             <input
                                 type="text"
                                 name="tipo"
-                                value="<%= customer.tipo %>"
+                                value="<%= consulta.tipo %>"
                                 placeholder="Tipo"
                                 class="form-control mb-3"
                             />
